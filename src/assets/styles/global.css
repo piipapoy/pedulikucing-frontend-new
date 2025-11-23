@@ -1,0 +1,137 @@
+/* src/assets/styles/global.css */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: #00796B; /* Warna hijau utama */
+}
+
+:root {
+  /* Definisikan variabel warna Anda di file CSS global */
+  --primary-color: #008080;
+  --primary-dark: #0A5C5C;
+  --secondary-color: #F5F5F5;
+  --text-color: #333;
+  --text-light: #777;
+  --border-color: #E0E0E0;
+}
+
+/* ===================================== */
+/* === STYLE BARU UNTUK TOMBOL FILTER === */
+/* ===================================== */
+
+/* Grup untuk menampung 2 tombol */
+.filter-buttons {
+  display: flex;
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 10px;
+}
+
+/* Tombol Reset Baru (Abu-abu/Putih) */
+.btn-reset-filter {
+  flex: 1; /* Biar lebarnya sama */
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid var(--border-color, #E0E0E0);
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Ini membuat sisa halaman jadi gelap */
+.filter-modal-overlay {
+  position: fixed; /* <-- INI KUNCINYA. Membuatnya 'mengambang' */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background gelap transparan */
+  z-index: 10; /* Memastikan di atas segalanya */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Muncul dari atas */
+  padding-top: 150px; /* Jarak dari atas layar */
+}
+
+.success-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* sesuaikan ukuran lingkaran */
+  height: 80px;
+  border-radius: 50%;
+  background-color: #006d6d; /* warna hijau tosca seperti di gambar */
+  margin: 0 auto; /* ini yang bikin lingkarannya ke tengah */
+}
+
+.success-icon-wrapper i {
+  color: white;
+  font-size: 32px;
+}
+
+
+/* Ini kotak putihnya */
+.filter-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.filter-modal h4 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.filter-group select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+}
+
+.btn-tutup-filter {
+  background-color: var(--primary-dark, #0A5C5C);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
